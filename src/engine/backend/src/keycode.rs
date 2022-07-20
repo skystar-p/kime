@@ -86,6 +86,7 @@ pub enum KeyCode {
     M,
 
     Esc,
+    CapsLock,
     Shift,
     Backspace,
     Enter,
@@ -194,6 +195,7 @@ impl KeyCode {
             117 => Some(Self::PageDown),
 
             9 => Some(Self::Esc),
+            66 => Some(Self::CapsLock),
             100 => Some(Self::Henkan),
             102 => Some(Self::Muhenkan),
             64 => Some(Self::AltL),
@@ -346,4 +348,5 @@ fn key_parse() {
     assert_eq!("S-4".parse::<Key>().unwrap(), Key::shift(KeyCode::Four));
     assert_eq!("C-Space".parse::<Key>().unwrap(), Key::ctrl(KeyCode::Space));
     assert_eq!("M-X".parse::<Key>().unwrap(), Key::alt(KeyCode::X));
+    assert_eq!("CapsLock".parse::<Key>().unwrap(), Key::new(KeyCode::CapsLock, ModifierState::empty()));
 }
