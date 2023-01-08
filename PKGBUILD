@@ -1,4 +1,4 @@
-pkgname=kime-pacthed-git
+pkgname=kime-patched-git
 pkgver=2.5.6.r35.gff4e009
 pkgrel=1
 pkgdesc="Korean IME"
